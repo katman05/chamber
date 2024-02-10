@@ -1,0 +1,30 @@
+[package]
+name = "chamber-cli"
+version = "0.2.0"
+edition = "2021"
+license = "MIT"
+description = "The CLI for Chamber, the self-hostable SecretOps service."
+homepage = "https://www.github.com/joshua-mo-143/chamber"
+documentation = "https://www.github.com/joshua-mo-143/chamber"
+repository = "https://www.github.com/joshua-mo-143/chamber"
+readme = "../README.md"
+
+[[bin]]
+name = "chamber"
+path = "src/bin/main.rs"
+
+[dependencies]
+chamber-core = "0.2.0"
+bincode = { workspace = true }
+#chamber-core = { path = "../chamber-core" }
+clap = { version = "4.4.11", features = ["derive", "env"] }
+comfy-table = "7.1.0"
+generic-array = { workspace = true }
+home = "0.5.9"
+inquire = "0.6.2"
+nanoid = { workspace = true }
+reqwest = { version = "0.11.22", features = ["json", "blocking", "multipart"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+toml = "0.8.8"
+typenum = { workspace = true }
